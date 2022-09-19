@@ -1,10 +1,161 @@
-body
-{
+body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color: #ccc;
+    margin: 0px auto 30px auto;
+    padding: 0px 15px 15px 30px;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #aaa;
+    position: fixed;
+    left:0px;
+    top: 0px;
+}
+
+.banner{
+    height: 400px;
+    background-image: url('../images/DSC_0122.JPG');
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1{
+    color:white;
+    text-align: center;
+    padding-top:60px;
+    font-size: 46px;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+
+section.about-me{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 38px;
+    text-align: justify;
+}
+
+section.my-portfolio div{
+    background-color: #999;
+    border: 1px solid #000;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-inline{
+    display: inline;
+    background-color: aqua;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-inline.d2{
+    width: 300px;
+    display: inline-block;
+    background-color: red;
+}
+
+.d-none, .d-inline {
+    font-size: 16px;
+}
+
+section .d-inline{
+    color: yellow;
+}
+
+section>.d-inline{
+    color: green;
+}
+
+section>div>.d-inline{
+    color: violet;
+}
+
+.with-direction{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.with-direction>div{
+    height: 40px;
+    text-align: center;
+}
+
+.d12{
+    order: 5;
+    flex-grow: 1;
+}
+
+.d13{
+    order: 1;
+    flex-grow: 1;
+}
+
+.d14{
+    order:2;
+    flex-grow: 2;
+}
+
+.d15{
+    order: 4;
+    flex-grow: 1;
+}
+
+.d16{
+    order: 3;
+    flex-grow: 3;
+}
+
+section.my-portfolio div.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: none;
+    border: none;
+    padding: 15px;
+}
+
+.d-flex>.d-inline{
+    display: inline-block;
+    width: 180px;
+    padding: 15px;
+    margin: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 5px 10px #ccc;
+    border-radius: 4px;
+}
+
+section.my-portfolio .d-flex h4{
+    min-height: 60px;
+}
+
+section.my-portfolio .d-flex p{
+    font-size: 14px;
+}
+
 .basic-grid,
-.advance-grid
+.advance-grid,
+.gridColRow,
+.gridArea
 {
     display:grid;
     grid-template-columns: auto auto auto;
@@ -13,13 +164,20 @@ body
     padding: 10px;
 
 }
+.gridColRow
+{
+    grid-template-columns: auto auto auto auto;
+}
 .advance-grid
 {
     grid-template-columns: auto auto auto auto auto;
 
 }
-
-.basic-grid>div,.advance-grid>div
+.gridArea
+{
+    grid-template-columns: auto auto auto auto auto auto;
+}
+.basic-grid>div,.advance-grid>div, .gridColRow>div, .gridArea>div
 {
     border: 1px solid gray;
     text-align: center;
@@ -57,4 +215,35 @@ body
 .advance-grid .box2
 {
     grid-row: 1/3;
+}
+.gridColRow .box1
+{
+    grid-row: 1/3;
+}
+.gridColRow .box10
+{
+    grid-row: 3/5;
+}
+.gridColRow .box3
+{
+    grid-column: 3/5;
+}
+.gridColRow .box8
+{
+    grid-column: 3/5;
+}
+.gridArea .box8
+{
+    background-color: aqua;
+    grid-area: 2/2/5/4;
+}
+.gridArea .box9
+{
+    background-color: aquamarine;
+    grid-area: 2/4/5/6;
+}
+.gridArea .box5
+{
+    background-color: yellowgreen;
+    grid-column: 5/7;
 }

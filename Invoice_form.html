@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Form</title>
+    <style>
+        table, tr, td
+        {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        .tdAlign
+        {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.google.com" method="" id="store">
+        <fieldset>
+            <legend>Invoice Details</legend>
+            <Label>Invoice To:</Label><input type="text" name="invoiceto" maxlength="50"> <br>
+            <label>Contact:</label><input type="text" name="contact" maxlength="14">
+            <label>Date: </label><input type="date" name="dateissue">
+            <label>Currency:</label>
+            <Select required name="currency" id="currency">
+                
+                <option>--Select Currency--</option>
+                <option value="aud">AUD</option>
+                <option value="eur">EUR</option>
+                <option value="php">PHP</option>
+                <option value="usd">USD</option>
+            </select>
+        <table>
+            <tr>
+                <th>Item Description</th>
+                <th>Qty</th>
+                <th>Unit Price</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td><textarea maxlength="100"></textarea></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><textarea maxlength="100"></textarea></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><textarea maxlength="100"></textarea></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><textarea maxlength="100"></textarea></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td class="tdAlign" colspan="3">Subtotal</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tdAlign" colspan="3">VAT</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tdAlign" colspan="3">Total</td>
+                <td></td>
+            </tr>
+        </table>
+        </fieldset>
+        <fieldset>
+            <legend>Additional Data</legend>
+            <label>Payment Method:</label>
+            <Select required name="modeofpayment" id="modeofpayment">
+                
+                <option>--Select Payment Method--</option>
+                <option value="cod">Cash on Delivery</option>
+                <option value="cc">Credit Card</option>
+                <option value="gcash">GCash</option>
+                <option value="paypal">Paypal</option>
+            </select><br>
+            <label for="address"></label>
+            <input type="radio" name="home" value="home">Home
+            <input type="radio" name="office" value="office">Office <br>
+            <textarea name="address" placeholder="Delivery Address" maxlength="300"></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear Data </button>
+    </form>
+    
+</body>
+</html>

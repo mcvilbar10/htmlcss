@@ -10,10 +10,56 @@ body{
     padding: 0px 15px 15px 30px;
 }
 
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+  }
+.flex-container{
+    display: flex;
+    width: 100%;
+    margin: 25px;
+    padding: 10px;
+    line-height: 700px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+.flex-container>div
+{
+    display:flex;
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    text-align:left;
+    box-shadow:5px 10px #aaa;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.proj1,.proj5,.proj2,.proj3,.proj4,.proj6
+{
+    align-self: auto;
+    max-height: 400Px;
+    max-width: 300px;
+    width: 50%;
+}
+.proj5
+{
+    align-items: flex-end;
+    margin-left: 25%;
+    margin-right: 0%;
+}
+.proj6
+{
+    align-items: flex-end;
+    margin-left: 0%;
+    margin-right: 10%;
+}
+
 header {
     height: 50px;
     width: 100%;
-    background-color: #aaa;
+    background-color: #333;
     position: fixed;
     left:0px;
     top: 0px;
@@ -24,6 +70,7 @@ header {
     background-image: url('../images/DSC_0122.JPG');
     background-size: cover;
     background-position: bottom;
+    margin-top: 60px;
 }
 
 h1{
@@ -247,3 +294,42 @@ section.my-portfolio .d-flex p{
     background-color: yellowgreen;
     grid-column: 5/7;
 }
+nav ul
+{
+    list-style: none;
+    margin: 0;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    line-height: 50px;
+    font-weight: 600;
+}
+nav ul li:hover a{
+    color: yellow;
+}
+nav ul li:hover{
+    background-color: forestgreen;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+@media screen and (max-width:992px){
+    header{
+        height: auto;
+        position: absolute;
+        background-color: #333333cc;
+    }
+    .banner{
+        margin-top: 240px;
+    }
+}
+nav ul li{
+    display:block;
+}
+/*@media screen and (max-width:425px){
+    .banner{
+
+    }
+}*/

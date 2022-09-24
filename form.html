@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js" type="javascript"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="border p-3 my-5 rounded">
+            <div class="row">
+                <div class="col my-3">
+                    <label class="form-label">Firstname</label>
+                    <input class="form-control" type="text" name="first_name"> 
+                </div>
+                <div class="col my-3">
+                <label class="form-label">Lastname</label>
+                <input class="form-control" type="text" name="lastname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" type="email" name="email">
+                </div>
+                <div class="col my-3">
+                    <label class="form-label">Contact #</label>
+                    <input class="form-control" type="text" name="contactno">              </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <textarea class="form-control" name="address" placeholder="Add address here:"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <label class="form-label">Payment Method</label>
+                    <select class="form-select" name="payment_method">
+                        <option>--</option>
+                        <option value="">Gcash</option>
+                        <option value="">Credit Card</option>
+                        <option value="C">Cash on Delivery</option>
+                    </select>
+
+                </div>
+                <div class="col my-3">
+                    <label class="form-label">Amount</label>
+                    <input type="number" name="amount">
+                </div>
+                <div class="col my-3">
+                    <label class="form-label">VAT</label>
+                    <input type="number" name="amount">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <input type="radio" class="form-check-input" id="aud">
+                    <label for="aud">AUD</label>
+                    <input type="radio" class="form-check-input" id="php">
+                    <label for="php">PHP</label>
+                    <input type="radio" class="form-check-input" id="usd">
+                    <label for="usd">usd</label>
+                </div>
+            </div>
+            <h4>Add-Ons</h4>
+            <div class="row">
+                <div class="col my-3">
+                    <input id="c_lalamove"class="form-check-input" type="checkbox">
+                    <label for="c_wgc" class="form-label">With Gift Card</label>
+                    <input id="c_lalamove"class="form-check-input" type="checkbox">
+                    <label for="c_discount" class="form-label">With 10% discount</label>
+                    <input id="c_lalamove"class="form-check-input" type="checkbox">
+                    <label for="c_ecobag" class="form-label">In Ecobag</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <label class="form-label">Date Delivery</label>
+                    <input class="form-control" type="date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <label class="form-label">Range</label>
+                    <input class="form-range" type="range" step="1" >
+                    <input type="range" step="1" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-success">Submit</button>
+                    <button class="btn btn-secondary">Submit</button>
+                    <button class="btn btn-warning">Warning</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

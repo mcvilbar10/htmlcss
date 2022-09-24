@@ -7,6 +7,94 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js" type="javascript"></script>
+    <style>
+      .img-thumbnail {
+          padding: 0.5rem;
+      }
+
+      .rounded-circle>img {
+          position: relative;
+          left: -40px;
+      }
+
+      #profile-photo {
+          max-width: 300px;
+          max-height: 400px;
+          overflow: none;
+          margin: 30px auto;
+      }
+
+      #profile-photo>img {
+          width: 100%;
+          height: auto;
+      }
+
+      .my-portfolio {
+          background-color:#ccc;
+      }
+
+      .my-portfolio>row {
+          justify-content: center;
+      }
+
+      .my-portfolio h4.card-title {
+          height: 80px;
+      }
+
+      .work-education>.container>.row>.col.text-end {
+          border-right: 4px solid green;
+      }
+      
+      .work-education>.container>.row>.col.order-last {
+          border-left: 4px solid green;
+      }
+
+      .col.text-end::after,
+      .col.order-last::after{
+          content: "\2666";
+          font-size: 42px;
+          color: green;
+          position:relative;
+          right: -28px;
+          bottom:36px;
+      }
+
+      .col.order-last::after {
+          left: -28px;
+      }
+
+      button::before {
+          content: ">";
+          font-size: 24px;
+      }
+
+      @media screen and (max-width:768px) {
+          .work-education>.container>.row>.col {
+              display: none;
+          }
+
+          .work-education>.container>.row>.col.text-end,
+          .work-education>.container>.row>.col.order-last{
+              display: block;
+              text-align: center !important;
+              margin-bottom: 30px;
+          }
+
+          .col.text-end::after,
+          .col.order-last::after{
+              content: '';
+          }
+
+          .work-education>.container>.row>.col.text-end {
+              border-right:none;
+          }
+          
+          .work-education>.container>.row>.col.order-last {
+              border-left: none;
+          }
+      }
+
+  </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -29,18 +117,20 @@
                 <a class="nav-link" href="#">Experience</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"></a>Contact Me</a>
+                <a class="nav-link" href="#">Contact Me</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    <section class="container">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3 justify-content-evenly">
-            
-        </div>    
-    </section>
-    <section>
+    
+    <div class="container mb-3">
+        <div class="row">
+            <img src="images/pic_nature.jpg" class="img-fluid z-index=1" style="position:absolute;">
+            <img src="images/Maricar.jpg" style="position:relative;min-height: 25px;min-width: 25px;" >
+        </div>
+    <div>
+      
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3 justify-content-evenly">
             <div class="col-lg col-md-4 col-sm-6 mb-3"">
                 <div class="card h-100" >
@@ -93,6 +183,8 @@
                 </div>
             </div>
         </div>
-    </section>
+      
+    </div>
+    
 </body>
 </html>

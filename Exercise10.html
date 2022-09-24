@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js" type="javascript"></script>
+</head>
+<body>
+    <form class="border p-3 my-5 rounded">
+        <fieldset style="background-color:aquamarine; border: 1px solid blanchedalmond;">
+            <legend>Invoice Details</legend>
+            <div class="container">
+                <div class="row">
+                    <div class="col my-2">
+                        <label class="form-label">Invoice To:</label>
+                        <input class="form-control" type="text" name="customername"> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <label class="form-label">Contact No.:</label>
+                        <input class="form-control" type="number" name="contactno"> 
+                    </div>
+                    <div class="col my-2">
+                        <label class="form-label">Date</label>
+                        <input class="form-control" type="date" name="date"> 
+                    </div>
+                    <div class="col my-2">
+                        <label class="form-label">Currency:</label>
+                        <select class="form-select" name="currency">
+                            <option>--</option>
+                            <option value="aud">AUD</option>
+                            <option value="eur">EUR</option>
+                            <option value="php">PHP</option>
+                            <option value="usd">USD</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <h6>Item Description</h6>
+                    </div>
+                    <div class="col my-2">
+                        <h6>Qty</h6>
+                    </div>
+                    <div class="col my-2">
+                        <h6>Unit Price</h6>
+                    </div>
+                    <div class="col my-2">
+                        <h6>Amount</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <input class="form-control" type="text" name="itemdecsrip">
+                    </div>
+                    <div class="col my-2">
+                        <input class="form-control" type="number" name="qty">
+                    </div>
+                    <div class="col my-2">
+                        <input class="form-control" type="number" name="unitprice">
+                    </div>
+                    <div class="col my-2">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1">
+                        <input class="form-control" type="text" name="itemdecsrip">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="qty">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="unitprice">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1">
+                        <input class="form-control" type="text" name="itemdecsrip">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="qty">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="unitprice">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1">
+                        <input class="form-control" type="text" name="itemdecsrip">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="qty">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="unitprice">
+                    </div>
+                    <div class="col my-1">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1 text-end">
+                        <p>Sub-total</p>
+                    </div>
+                    <div class="col my-1 text-end">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1 text-end">
+                        <p>VAT</p>
+                    </div>
+                    <div class="col my-1 text-end">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-1 text-end">
+                        <p>Total</p>
+                    </div>
+                    <div class="col my-1 text-end">
+                        <input class="form-control" type="number" name="amount">
+                    </div>
+                </div>
+            </div>
+        </fieldset">
+        <fieldset style="background-color:blanchedalmond; padding-top: 5px;">
+            <legend>Additional Data</legend>
+            <div class="row">
+                <div class="col my-2">
+                    <label class="form-label">Payment Method:</label>
+                        <select class="form-select" name="formpayment">
+                            <option>--Select Payment Method</option>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="cc">Credit Card</option>
+                            <option value="gcash">GCash</option>
+                            <option value="paypal">Paypal</option>
+                        </select>   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-3">
+                    <h6>Delivery Address</h6>
+                    <input type="radio" class="form-check-input" id="aud">
+                    <label for="aud">Home Address</label>
+                    <input type="radio" class="form-check-input" id="php">
+                    <label for="php">Office Address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col my-1">
+                    <textarea class="form-control" name="address" placeholder="Delivery Address Here"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row">
+            <div class="col my-3">
+                <button class="btn btn-primary">Submit</button>
+                <input type="reset" class="btn btn-success" value="Reset Button">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid gray;
+            height: 30px;
+            padding: 15px;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body id="main">
+    <div class="container" id="main-container">Hello World!</div>
+    <div class="container" id="main-container1">Hello World!</div>
+    <div class="container" id="main-container2">Hello World!</div>
+    <div class="container" id="main-container3">Hello World!</div>
+    <div class="container" id="main-container4">
+        <button onclick="onClickSmall()">Small</button>
+        <button onclick="onClickLarge()">Large</button>
+    </div>
+    <ul>
+        <li data-id="student1">Dave</li>
+        <li data-id="student2">Aldrin</li>
+        <li data-id="student3">Maricar</li>
+    </ul>
+</body>
+<script>
+    document.getElementById("main-container").innerHTML="Hello Javascript!"
+    document.getElementById("main-container1").innerHTML="I am a dynamic content"
+    document.getElementById("main-container2").innerHTML="My name is Maricar Vilbar"
+    document.getElementById("main-container3").innerHTML="Hello Javascript!"
+    document.getElementById("main-container3").innerHTML="I am a web developer"
+
+    function onClickSmall(){
+        document.getElementById("main-container1").innerHTML="I am a small dynamic content";
+        document.getElementById("main-container1").style.fontSize="10px";
+        document.getElementById("main-container2").setAttribute("class","yellow");
+        document.getElementById("main-container3").style.display="none";
+    }
+
+    function onClickLarge(){
+        document.getElementById("main-container1").innerHTML="I am a small dynamic content";
+        document.getElementById("main-container1").style.fontSize="10px";
+        document.getElementById("main-container2").setAttribute("class","yellow");
+        document.getElementById("main-container3").style.display="block";
+    }
+</script>
+</html>

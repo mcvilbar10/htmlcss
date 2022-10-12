@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Exercise 1</title>
+</head>
+<body>
+    <div>Machine Problem 1</div>
+    <input type="number" id="odd" placeholder="enter the number">
+    <button onclick="OddEven()">Check if ODD or Even</button>
+    <div></div>
+    <div id="oddeven"></div>
+    <div></div>
+
+    <div>Machine Problem 2</div>
+    <input type="text" id="single_char" placeholder="enter charater" maxlength="1" width="1px">
+    <button onclick="CheckVC()">Vowel or Consonant Checking</button> 
+    <div id="vowel"></div>
+</body>
+<script>
+    function OddEven(){
+        let val1=document.getElementById("odd").value;
+
+        if(val1 % 2 == 0) {
+            document.getElementById("oddeven").innerHTML="The number "  + val1  + " is" +"<b>" +" even" + "</b>";
+        }
+        else {
+            document.getElementById("oddeven").innerHTML="The number "  + val1  + " is" +"<b>" +" odd" + "</b>";
+        }
+    }
+
+    function CheckVC(){
+        let val2=(document.getElementById("single_char").value).toLowerCase();
+
+        if(val2=='a' || val2=='e' || val2=='i' || val2=='o' || val2=='u')
+            document.getElementById("vowel").innerHTML="<b>" + val2 + "</b>" + " is a Vowel";
+        else
+            document.getElementById("vowel").innerHTML="<b>" + val2 + "</b>" + " is a Consonant";        
+    }
+</script>
+</html>

@@ -7,7 +7,12 @@
     <title>Simple Calculator</title>
 </head>
 <body>
-    <h1>Simple Calculator</h1>
+    <h1>Vowel or Consonant - Machine Problem 1</h1>
+    <input type="text" id="single_char" placeholder="enter charater" maxlength="1" width="1px">
+    <button onclick="CheckVC()">Vowel or Consonant Checking</button> 
+    <div id="vowel"></div>
+
+    <h1>Simple Calculator - Machine Problem 2</h1>
         <div>Enter Number 1: <input type="number" id="data-1"></div>
         <div>Enter Number 2: <input type="number" id="data-2"></div>
         <div id="answer">Answer        : </div>
@@ -27,7 +32,6 @@
     }
     function operation(method)
     {
-        
         const prev = parseFloat(document.getElementById("data-1").value)
         const current = parseFloat(document.getElementById("data-2").value)
         if (isNaN(prev) || isNaN(current)) return
@@ -46,6 +50,25 @@
                 break
             default:
                 return;
+        }
+    }
+
+    function CheckVC(){
+        let val2=(document.getElementById("single_char").value).toLowerCase();
+        console.log(val2);
+        switch(val2)
+        {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                document.getElementById("vowel").innerHTML="Vowel";
+                break
+            default:
+                document.getElementById("vowel").innerHTML="Consonant";
+                break
+
         }
     }
 </script>

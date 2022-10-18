@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <title>Exercise 4</title>
+</head>
+<body>
+    <h3>Machine Problem 1 </h3>
+    <input type="number" onkeyup="onKeyupHandler(event)">
+    <div id="res"></div>
+    <h3>Machine Problem 2</h3>
+    <div id="result"></div>
+
+</body>
+<script>
+
+function nextnumberdivisible7(num){
+    for (num;num<=num+7;num++){
+        if (num%7==0)
+    {
+        return num
+    }
+    }
+
+}
+
+function onKeyupHandler(e)
+{
+    document.getElementById('res').innerHTML=nextnumberdivisible7(e.currentTarget.value)
+}
+
+
+let invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
+                {description: "Keyboard", Qty: 3, unitPrice: 400},
+                {description: "Monitor", Qty: 6, unitPrice: 5400},
+                {description: "CPU Tower Case", Qty: 3, unitPrice: 1200},
+                {description: "Headset", Qty: 3, unitPrice: 500},
+                {description: "UPS", Qty: 1, unitPrice: 4000},];
+
+    let tableElem = "<div><table class='table'>";
+            tableElem += "<tr>";    
+            tableElem += "<th>Description</th>";    
+            tableElem += "<th>Quantity</th>";    
+            tableElem += "<th>Unit Price</th>";
+            tableElem += "<th>Amount</th>";    
+            tableElem += "</tr>"; 
+        invoiceItems.forEach(function(value, index, array){
+            tableElem += "<tr>";    
+            tableElem += "<td>"+ value.description +"</td>";    
+            tableElem += "<td>"+ value.Qty +"</td>";    
+            tableElem += "<td>"+ value.unitPrice +"</td>";  
+            tableElem += "<td>"+ value.unitPrice * value.Qty  +"</td>";   
+            tableElem += "</tr>";    
+            });
+
+        document.getElementById("result").innerHTML += tableElem + "</table></div>";
+</script>
+</html>

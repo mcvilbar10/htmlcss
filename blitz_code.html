@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Blitz Activities</title>
+</head>
+<body>
+    <h1>String Methods</h1>
+    <div id="act"></div>
+</body>
+<script>
+    let result = document.getElementById("act");
+    let qoute="to know how much there is to know is the beginning of learning to live";
+    let lotto=[18,9,54,36,45,27];
+    //result.innerHTML=qoute.replace(/know/g,"learn");
+
+    //result.innerHTML+="<br>" + lotto;
+    //result.innerHTML+="<br>" + qoute.substr(3,6);
+    //result.innerHTML+="<br>" + qoute.match(/is/g).length;
+    //result.innerHTML+="<br>" + lotto.join(";");
+    //result.innerHTML+="<br>" + qoute.replace(/know/i,"more");
+    //result.innerHTML+="<br>" + lotto.shift();
+    //result.innerHTML+="<br>" + qoute.charCodeAt(5);
+    //result.innerHTML+="<br>" + lotto.join("*");
+    //result.innerHTML+="<br>" + lotto.pop();
+    //result.innerHTML+="<br>" + qoute.replace(/there/i,"that");
+    //result.innerHTML+="<br>" + qoute.startsWith("to");
+    //lotto+=lotto.splice(3,0,'9','10');
+    //result.innerHTML+="<br>" + lotto;
+    //result.innerHTML+="<br>" + qoute.substr(10,5);
+    //result.innerHTML+="<br>" + qoute.match(/the/g).length;
+    //result.innerHTML+="<br>" + lotto.shift().toExponential;
+    //result.innerHTML+="<br>" + qoute.replace(/is/g,"are");
+    //num=lotto.pop().toExponential();
+    //result.innerHTML+="<br>" + num;
+    //lotto+=lotto.splice(2,0,'6','7');
+    //result.innerHTML+="<br>" + lotto;
+    //result.innerHTML+="<br>" + lotto.unshift(63);
+
+    result.innerHTML= qoute.substr(0,10);
+    result.innerHTML+= "<br>" + qoute.replace(/the/g,'that');
+    result.innerHTML+= "<br>" + lotto.join("<br>");
+
+</script>
+</html>
